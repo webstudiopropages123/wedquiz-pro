@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Pro | Master the Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="blob-bg"></div>
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1 class="glow-text">Quiz Pro</h1>
+            <p class="subtitle">Choose your challenge to begin</p>
+            <div class="category-grid">
+                <div class="category-card" data-category="html">
+                    <div class="icon-wrapper html-theme">
+                        <svg class="category-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 5l1.5 14.5L12 22l8.5-2.5L22 5L12 2zm5.8 5.3l-.4 4H10.1l.2 1.7h7.1l-.5 5-4.9 1.4-4.9-1.4-.3-3.3h2.4l.2 1.5 2.6.7 2.6-.7.3-2.6H7.3l-.7-7.7h11.2z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>HTML5 Mastery</h3>
+                    <p>Tags, structure, and semantics.</p>
+                </div>
+                <div class="category-card" data-category="css">
+                    <div class="icon-wrapper css-theme">
+                        <svg class="category-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 5l1.5 14.5L12 22l8.5-2.5L22 5L12 2zm5.6 5.3l-.2 1.8H9.7l.2 1.7h7.1l-.4 4-4.7 1.3-4.7-1.3-.3-3.3h2.4l.2 1.5 2.4.7 2.4-.7.2-2.1H7.1l-.5-5h11z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>CSS3 Styling</h3>
+                    <p>Flexbox, Grid, and Animations.</p>
+                </div>
+                <div class="category-card" data-category="javascript">
+                    <div class="icon-wrapper js-theme">
+                        <svg class="category-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3h18v18H3V3zm11.5 10.3c0-.8-.4-1.3-1.2-1.6l-.8-.3c-.5-.2-.7-.4-.7-.7s.3-.5.7-.5c.5 0 .8.2 1 .6h1.9c-.2-1.3-1.2-2.1-2.9-2.1-1.7 0-2.8.9-2.8 2.2 0 1.2.7 1.8 1.9 2.2l.7.2c.6.2.9.5.9.9s-.4.6-.9.6c-.7 0-1.1-.3-1.3-1H7.8c.2 1.6 1.4 2.4 3.3 2.4 2 0 3.4-1.1 3.4-2.9zm-7 4.7h2V12H7.5v6z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>JavaScript ES6+</h3>
+                    <p>Logic, DOM, and Async events.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="timer-circle" id="timer">15</div>
+            </div>
+            
+            <div class="question-container">
+                <span class="question-count" id="question-count">Question 1/20</span>
+                <h2 id="question-text">How do you select an element with id "demo"?</h2>
+                <div class="options-grid" id="options-container">
+                    <!-- Options injected here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="result-card">
+                <h2 class="glow-text">Quiz Completed!</h2>
+                <div class="score-display">
+                    <span id="final-score">0</span>
+                    <span class="total">/ 20</span>
+                </div>
+                <p id="performance-msg">Great effort!</p>
+                <button id="restart-btn" class="primary-btn">Restart Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
